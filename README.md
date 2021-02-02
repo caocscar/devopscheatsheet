@@ -9,7 +9,11 @@
 - `sudo docker images`
 - `sudo docker system df`
 
-
+## Kubectl
+command|description
+---|---
+kubectl get po | get description of pods
+kubectl describe po sandbox-dashboard-api | describe pod
 
 ## Kubernetes Redeployment
 - update docker container with  
