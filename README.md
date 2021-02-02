@@ -9,11 +9,16 @@
 - `sudo docker images`
 - `sudo docker system df`
 
-## Kubectl
+## Kubectl (controls the Kubernetes cluster manager)
 command|description
 ---|---
 kubectl get po | get description of pods
 kubectl describe po sandbox-dashboard-api | describe pod
+
+## Helm (Kubernetes package manager)
+command|description
+---|---
+helm list |list releases of charts with chart and app version
 
 ## Kubernetes Redeployment
 - update docker container with  
