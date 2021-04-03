@@ -24,6 +24,7 @@ command|description
 helm list | list releases of charts with chart and app version
 helm upgrade | upgrade helm chart
 helm upgrade --install | upgrade or install helm chart
+helm uninstall | delete helm deployment
 
 ## Kubernetes Redeployment
 - update docker container with  
