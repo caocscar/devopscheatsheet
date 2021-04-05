@@ -1,13 +1,18 @@
 # devopscheatsheet
 
 ## Docker
-- `sudo docker build -t api-test .`
-- `sudo docker run -dp 5000:5000 --name ac api-test`
-- `sudo docker ps`
-- `sudo docker stop ac`
-- `sudo docker rm -f ac`
-- `sudo docker images`
-- `sudo docker system df`
+command|description
+---|---
+`sudo docker build -t <image_name> .` | build an image
+`sudo docker run -dp 5000:5000 --name <container_name> <image_name` | run detached `-d` specifying container name
+`sudo docker ps` | list running processes
+`sudo docker ps -a` | list all (running and stopped) processes
+`sudo docker stop <container_name>` | stop container
+`sudo docker rm -f <container_name>` | stop and remove container
+`sudo docker images`
+`sudo docker system df`
+`sudo docker exec -ti <container name> /bin/bash` | open a shell in the container
+`sudo docker exec -ti --env-file .env -p 5000:5000 --name <container name> <image_name>` | use .env to specify environmental variables
 
 ## Kubectl (controls the Kubernetes cluster manager)
 command|description
