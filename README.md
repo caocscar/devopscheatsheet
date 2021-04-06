@@ -11,8 +11,9 @@ command|description
 `sudo docker rm -f <container_name>` | stop and remove container
 `sudo docker images`
 `sudo docker system df`
-`sudo docker exec -ti <container name> /bin/bash` | open a shell in the container
-`sudo docker exec -ti --env-file .env -p 5000:5000 --name <container name> <image_name>` | use .env to specify environmental variables
+`sudo docker exec -ti <container_name> /bin/bash` | open a shell in the container
+`sudo docker exec -ti --env-file .env -p 5000:5000 --name <container_name> <image_name>` | use .env to specify environmental variables
+`sudo docker logs <container_name>` | show log output from container
 
 ## Kubectl (controls the Kubernetes cluster manager)
 command|description
