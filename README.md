@@ -21,7 +21,7 @@ command|description
 `kubectl get po` | get description of pods
 `kubectl describe po sandbox-dashboard-api` | describe pod
 `kubectl config get-contexts` | list current and other contexts
-`kubectl config use-context \<namespace>` | switched to context \<namespace>
+`kubectl config use-context <namespace>` | switched to context \<namespace>
 `aws eks update-kubeconfig --name=may-japan-root-cluster --profile=maymobility --region=ap-northeast-1` | update kubeconfig file
 
 ## Helm (Kubernetes package manager)
@@ -31,7 +31,7 @@ command|description
 `helm upgrade` | upgrade helm chart
 `helm upgrade --install` | upgrade or install helm chart
 `helm uninstall` | delete helm deployment
-`helm status \<NAME>` | display status of deployment
+`helm status <NAME>` | display status of deployment
 
 ## Kubernetes Redeployment
 - update docker container with  
