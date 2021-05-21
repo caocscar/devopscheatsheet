@@ -22,6 +22,7 @@ command|description
 `kubectl describe po sandbox-dashboard-api` | describe pod
 `kubectl config get-contexts` | list current and other contexts
 `kubectl config use-context <namespace>` | switched to context \<namespace>
+`kubectl get certificates` | list TLS certificate status and age
 `aws eks update-kubeconfig --name=may-japan-root-cluster --profile=maymobility --region=ap-northeast-1` | update kubeconfig file
 
 ## Helm (Kubernetes package manager)
