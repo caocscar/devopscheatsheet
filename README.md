@@ -1,4 +1,10 @@
 # devopscheatsheet
+## AWS CLI
+command|description
+---|---
+`aws s3 cp <S3:URI>`| Copying an S3 object to a local file
+
+Reference: https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html
 
 ## Docker
 command|description
