@@ -9,17 +9,18 @@ Reference: https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html
 ## Docker
 command|description
 ---|---
-`sudo docker build -t <image_name> .` | build an image
-`sudo docker run -dp 5000:5000 --name <container_name> <image_name` | run detached `-d` specifying container name
-`sudo docker ps` | list running processes
-`sudo docker ps -a` | list all (running and stopped) processes
-`sudo docker stop <container_name>` | stop container
-`sudo docker rm -f <container_name>` | stop and remove container
-`sudo docker images`
-`sudo docker system df`
-`sudo docker exec -ti <container_name> /bin/bash` | open a shell in the container
-`sudo docker exec -ti --env-file .env -p 5000:5000 --name <container_name> <image_name>` | use .env to specify environmental variables
-`sudo docker logs <container_name>` | show log output from container
+`docker build -t <image_name> .` | build an image
+`docker run -dp 5000:5000 --name <container_name> <image_name` | run detached `-d` specifying container name
+`docker ps` | list running processes
+`docker ps -a` | list all (running and stopped) processes
+`docker stop <container_name>` | stop container
+`docker rm -f <container_name>` | stop and remove container
+`docker images` | list images
+`docker image prune` | remove unused images
+`docker system df` | 
+`docker exec -ti <container_name> /bin/bash` | open a shell in the container
+`docker exec -ti --env-file .env -p 5000:5000 --name <container_name> <image_name>` | use `.env` file to specify environmental variables
+`docker logs <container_name>` | show log output from container
 
 ## Kubectl (controls the Kubernetes cluster manager)
 command|description
