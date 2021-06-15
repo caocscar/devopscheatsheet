@@ -16,6 +16,7 @@ command|description
 `docker stop <container_name>` | stop container
 `docker rm -f <container_name>` | stop and remove container
 `docker images` | list images
+`docker image rm` | remove one or more images
 `docker image prune` | remove unused images
 `docker system df` | 
 `docker exec -ti <container_name> /bin/bash` | open a shell in the container
