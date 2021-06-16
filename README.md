@@ -41,6 +41,7 @@ command|description
 `helm upgrade --install` | upgrade or install helm chart
 `helm uninstall` | delete helm deployment
 `helm status <NAME>` | display status of deployment
+`helm history <NAME>` | history of deployment
 
 ## Kubernetes Redeployment
 - update docker container with  
