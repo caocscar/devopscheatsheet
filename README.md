@@ -42,6 +42,8 @@ command|description
 `helm uninstall` | delete helm deployment
 `helm status <NAME>` | display status of deployment
 `helm history <NAME>` | history of deployment
+`helm rollback <NAME> <REVISION>` | rollback to specified revision (defaults to previous revision)
+`helm dependency update` | ask Griffin
 
 ## Kubernetes Redeployment
 - update docker container with  
