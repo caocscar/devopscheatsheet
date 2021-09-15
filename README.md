@@ -22,6 +22,7 @@ command|description
 `docker exec -ti <container_name> /bin/bash` | open a shell in the container
 `docker exec -ti --env-file .env -p 5000:5000 --name <container_name> <image_name>` | use `.env` file to specify environmental variables
 `docker logs <container_name>` | show log output from container
+`sudo usermod -a -G docker <user>` | remove sudo requirement for user
 
 ## Kubectl (controls the Kubernetes cluster manager)
 command|description
