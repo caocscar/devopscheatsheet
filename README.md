@@ -47,7 +47,7 @@ command|description
 `helm dependency update` | ask Griffin
 
 ## Kubernetes Redeployment
-- update docker container with  
+- update docker container registry manually with  
 `docker build -t code.maymobility.com:5050/devops/artifactory-stage/dashboard-api:<your-tag> .`
 - update `Chart.yaml` (Helm chart for Kubernetes) with updated chart version and app version
 - update `*.values.yaml` with latest image `tag` and required environmental variables
