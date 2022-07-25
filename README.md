@@ -23,6 +23,7 @@ command|description
 `docker exec -ti --env-file .env -p 5000:5000 --name <container_name> <image_name>` | use `.env` file to specify environmental variables
 `docker logs <container_name>` | show log output from container
 `sudo usermod -a -G docker <user>` | remove sudo requirement for user
+`docker ps -qa \|xargs -I % sh -c 'docker stop % && docker rm -v %'` | delete all stopped containers
 
 ## Kubectl (controls the Kubernetes cluster manager)
 command|description
