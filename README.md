@@ -29,11 +29,11 @@ command|description
 command|description
 ---|---
 `kubectl get po` | get description of pods
-`kubectl describe po sandbox-dashboard-api` | describe pod
+`kubectl describe po <namespace>` | describe pod
 `kubectl config get-contexts` | list current and other contexts
 `kubectl config use-context <namespace>` | switched to context \<namespace>
 `kubectl get certificates` | list TLS certificate status and age
-`aws eks update-kubeconfig --name=may-japan-root-cluster --profile=maymobility --region=ap-northeast-1` | update kubeconfig file
+`aws eks update-kubeconfig --name=<cluster-name> --profile=<profile> --region=<region>` | update kubeconfig file
 
 ## Helm (Kubernetes package manager)
 command|description
@@ -50,10 +50,10 @@ command|description
 
 ## Kubernetes Redeployment
 - update docker container registry manually with  
-`docker build -t code.maymobility.com:5050/devops/artifactory-stage/dashboard-api:<your-tag> .`
+`docker build -t code.maymobility.com:5050/<container-registry>:<your-tag> .`
 - update `Chart.yaml` (Helm chart for Kubernetes) with updated chart version and app version
 - update `*.values.yaml` with latest image `tag` and required environmental variables
 - upgrade (redeploy) Helm chart with  
-`helm upgrade <NAME> ci/chart/dashboard-api --values ci/chart/dashboard-api/*.values.yaml`
+`helm upgrade <NAME> ci/chart/<repo> --values ci/chart/<repo>/*.values.yaml`
 - upgrade or install (deploy) Helm chart with  
-`helm upgrade --install <NAME> ci/chart/dashboard-api --values ci/chart/dashboard-api/*.values.yaml`
+`helm upgrade --install <NAME> ci/chart/<repo> --values ci/chart/<repo>/*.values.yaml`
