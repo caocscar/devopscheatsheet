@@ -33,6 +33,8 @@ command|description
 `kubectl config get-contexts` | list current and other contexts
 `kubectl config use-context <namespace>` | switched to context \<namespace>
 `kubectl get certificates` | list TLS certificate status and age
+`kubectl apply -f <yaml-file>` | apply yaml file
+`kubectl delete ingress <pod>` | delete existing ingress 
 `aws eks update-kubeconfig --name=<cluster-name> --profile=<profile> --region=<region>` | update kubeconfig file
 
 ## Helm (Kubernetes package manager)
