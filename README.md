@@ -35,14 +35,18 @@ command|description
 command|description
 ---|---
 `helm list` | list releases of charts with chart and app version
+`helm list --all-namespaces` | list releases of charts with chart and app version with namespaces
 `helm upgrade` | upgrade helm chart
 `helm upgrade --install` | upgrade or install helm chart
 `helm uninstall` | delete helm deployment
 `helm status <NAME>` | display status of deployment
 `helm history <NAME>` | history of deployment
+`helm history <NAME> --namespace ridemayte` | history of deployment with namespaces
 `helm rollback <NAME> <REVISION>` | rollback to specified revision (defaults to previous revision)
 `helm dependency update` | ask Griffin
 `helm get values <NAME>` | get the values files for the named release (extends to `all` or `hooks` or `manifest` or `notes`)
+
+**Note**: `default` is default namespace
 
 ## Kubernetes Redeployment
 - update docker container registry manually with  
