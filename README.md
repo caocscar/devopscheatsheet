@@ -30,6 +30,7 @@ command|description
 `kubectl apply -f <yaml-file>` | apply yaml file
 `kubectl delete ingress <pod>` | delete existing ingress 
 `aws eks update-kubeconfig --name=<cluster-name> --profile=<profile> --region=<region>` | update kubeconfig file
+`kubectl rollout restart deployment <deployment_name> -n <namespace>` | rollout restart of pods
 
 ## Helm (Kubernetes package manager)
 command|description
