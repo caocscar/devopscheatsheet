@@ -31,6 +31,7 @@ command|description
 `kubectl delete ingress <pod>` | delete existing ingress 
 `aws eks update-kubeconfig --name=<cluster-name> --profile=<profile> --region=<region>` | update kubeconfig file
 `kubectl rollout restart deployment <deployment_name> -n <namespace>` | rollout restart of pods
+`kubectl get namespaces` | list namespaces
 
 ## Helm (Kubernetes package manager)
 command|description
@@ -39,6 +40,7 @@ command|description
 `helm list --all-namespaces` | list releases of charts with chart and app version with namespaces
 `helm upgrade` | upgrade helm chart
 `helm upgrade --install` | upgrade or install helm chart
+`helm upgrade --install --create-namespace --namespace <NAMESPACE>` | create a new namespace when installing the 1st service in that namespace
 `helm uninstall` | delete helm deployment
 `helm status <NAME>` | display status of deployment
 `helm history <NAME>` | history of deployment
