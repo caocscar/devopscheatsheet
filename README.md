@@ -36,11 +36,12 @@ command|description
 ## Helm (Kubernetes package manager)
 command|description
 ---|---
-`helm list` | list releases of charts with chart and app version
+`helm list --namespace` | list releases of charts with chart and app version
 `helm list --all-namespaces` | list releases of charts with chart and app version with namespaces
 `helm upgrade` | upgrade helm chart
-`helm upgrade --install` | upgrade or install helm chart
-`helm upgrade --install --create-namespace --namespace <NAMESPACE>` | create a new namespace when installing the 1st service in that namespace
+`helm upgrade --install -n <NAMESPACE> <NAME>` | upgrade or install helm chart with namespace
+`helm upgrade -n <NAMESPACE> <NAME> ci/chart/<repo> --values ci/chart/<repo>/*.values.yaml` | use user-supplied values file
+`helm upgrade -n <NAMESPACE> <NAME> --set image.tag=latest` | use --set parameters to override values.yaml
 `helm uninstall` | delete helm deployment
 `helm status <NAME>` | display status of deployment
 `helm history <NAME>` | history of deployment
@@ -51,6 +52,8 @@ command|description
 
 **Note**: `default` is default namespace
 
+Reference: https://helm.sh/docs/chart_template_guide/values_files/
+
 ## Kubernetes Redeployment
 - update docker container registry manually with  
 `docker build -t code.maymobility.com:5050/<container-registry>:<your-tag> .`
@@ -58,5 +61,5 @@ command|description
 - update `*.values.yaml` with latest image `tag` and required environmental variables
 - upgrade (redeploy) Helm chart with  
 `helm upgrade <NAME> ci/chart/<repo> --values ci/chart/<repo>/*.values.yaml`
-- upgrade or install (deploy) Helm chart with  
-`helm upgrade --install <NAME> ci/chart/<repo> --values ci/chart/<repo>/*.values.yaml`
+- upgrade (deploy) Helm chart with  
+`helm upgrade -n <NAMESPACE> <NAME> ci/chart/<repo> --values ci/chart/<repo>/*.values.yaml`
