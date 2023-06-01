@@ -22,8 +22,8 @@ command|description
 ## Kubectl (controls the Kubernetes cluster manager)
 command|description
 ---|---
-`kubectl get po` | get description of pods
-`kubectl describe po <namespace>` | describe pod
+`kubectl get pod -n <namespace>` | get description of pods
+`kubectl describe pod -n <namespace>` | describe pod
 `kubectl config get-contexts` | list current and other contexts
 `kubectl config use-context <namespace>` | switched to context \<namespace>
 `kubectl get certificates` | list TLS certificate status and age
@@ -32,6 +32,8 @@ command|description
 `aws eks update-kubeconfig --name=<cluster-name> --profile=<profile> --region=<region>` | update kubeconfig file
 `kubectl rollout restart deployment <deployment_name> -n <namespace>` | rollout restart of pods
 `kubectl get namespaces` | list namespaces
+`kubectl exec -it <pod> -n <namespace> -- /bin/bash` | get a shell to the container in the pod
+`kubectl exec -it <pod> -n <namespace> --container <container> -- /bin/bash` | get a shell to a specific container in the pod
 
 ## Helm (Kubernetes package manager)
 command|description
