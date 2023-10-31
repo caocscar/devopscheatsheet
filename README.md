@@ -65,3 +65,19 @@ Reference: https://helm.sh/docs/chart_template_guide/values_files/
 `helm upgrade <NAME> ci/chart/<repo> --values ci/chart/<repo>/*.values.yaml`
 - upgrade (deploy) Helm chart with  
 `helm upgrade -n <NAMESPACE> <NAME> ci/chart/<repo> --values ci/chart/<repo>/*.values.yaml`
+
+## New Machine Installation
+Requirements:
+- AWS CLI
+- aws-iam-authenticator
+- kubectl
+- helm
+
+1. Set up your AWS credentials in `~/.aws/credentials`
+2. List available EKS clusters. `aws eks list-clusters --region <cluster_region> --profile <named_profile>`
+3. Update ~/.kube/config file. `aws eks update-kubeconfig --name=<name_eks_cluster> --profile=<named_profile> --role-arn arn:aws:iam::<account-number>:role/<role (can be k8sDev or k8sAdmin)> --region=<cluster_region>`
+
+Test Command
+`kubectl get pods`
+
+Reference: https://code.maymobility.com/devops/k8s-platform/-/blob/master/docs/getting-started.md
