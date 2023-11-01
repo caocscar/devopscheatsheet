@@ -75,9 +75,9 @@ Requirements:
 
 1. Set up your AWS credentials in `~/.aws/credentials`
 2. List available EKS clusters. `aws eks list-clusters --region <cluster_region> --profile <named_profile>`
-3. Update ~/.kube/config file. `aws eks update-kubeconfig --name=<name_eks_cluster> --profile=<named_profile> --role-arn arn:aws:iam::<account-number>:role/<role (can be k8sDev or k8sAdmin)> --region=<cluster_region>`
+3. Update ~/.kube/config file. `aws eks update-kubeconfig --name=<name_eks_cluster> --profile=<named_profile> --role-arn arn:aws:iam::<account-number>:role/<k8sAdmin> --region=<cluster_region>`
 
 Test Command
-`kubectl get pods`
+`kubectl get pods -n <namespace>`
 
 Reference: https://code.maymobility.com/devops/k8s-platform/-/blob/master/docs/getting-started.md
